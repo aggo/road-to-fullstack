@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Today</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="tile">
+    <h3>Location</h3>
+    <button onclick="getLocation();">Get Location</button>
+    <div id="location-result"></div>
+</div>
+
+<div class="tile">
+    <h3>Camera</h3>
+    <button onclick="showCamera();">Show camera</button>
+    <button onclick="takeSnapshot();">Take snapshot</button>
+    <video autoplay></video>
+    <img src="">
+    <canvas style="display:none;"></canvas>
+</div>
+
+<div class="tile">
+    <h3>Audio</h3>
+    <button onclick="audio();">Audio loopback</button>
+</div>
+
+<div class="tile">
+    <h3>WebWorkers</h3>
+    <p>999998727899999</p>
+    <div>
+        <p>is js running</p>
+        <div id="spinner"></div>
+    </div>
+    <label>
+        Test number
+        <input id="primeField" type="number">
+    </label>
+    <button onclick="console.log('Is this prime?',isPrime(document.getElementById('primeField').value));">
+        Is this prime?
+    </button>
+    <button onclick="console.log('Is this prime 10 times?',isPrimeTimes(document.getElementById('primeField').value, 10));">
+        Is this prime 10 times?
+    </button>
+    <button onclick="console.log('Is this prime 100 times?',isPrimeTimes(document.getElementById('primeField').value, 100));">
+        Is this prime 100 times?
+    </button>
+    <button onclick="isPrimeTimesWorker(document.getElementById('primeField').value, 100);">
+        Is this prime 100 times with workers?
+    </button>
+</div>
+
+<script src="location.js"></script>
+<script src="camera.js"></script>
+<script src="audio.js"></script>
+<script src="webWorkers.js"></script>
+</body>
+</html>

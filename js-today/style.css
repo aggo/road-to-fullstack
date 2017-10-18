@@ -1,0 +1,67 @@
+video, canvas {
+    width: 640px;
+    height: 480px;
+}
+
+.grayscale {
+    filter: grayscale(1);
+}
+
+.sepia {
+    filter: sepia(1);
+}
+
+.blur {
+    filter: blur(3px);
+}
+
+.brightness {
+    filter: brightness(.5);
+}
+
+.contrast {
+    filter: contrast(.5);
+}
+
+.hue-rotate {
+    filter: hue-rotate(90deg);
+}
+
+.saturate {
+    filter: saturate(4.5);
+}
+
+.invert {
+    filter: invert();
+}
+
+#spinner {
+    width: 50px;
+    height: 50px;
+    background-color: rebeccapurple;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-name: spin;
+    -webkit-animation-iteration-count: infinite;
+    margin: 2em;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    padding: 0;
+}
+
+.tile {
+    background-color: aliceblue;
+    margin-bottom: 2em;
+    padding: 1em;
+    min-height: 100vh;
+}
