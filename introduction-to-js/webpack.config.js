@@ -12,8 +12,8 @@ module.exports = {
     },
     plugins: [
         // new UglifyJSPlugin(),
-        new CleanWebpackPlugin(['dist']),
-        new HtmlWebpackPlugin({
+        new CleanWebpackPlugin(['dist']),  // deletes the content of dist when building
+        new HtmlWebpackPlugin({            // will bundle the js stuff and add the import to index.html (index.html doesn't have any js stuff initially)
             template: './index.html',
         }),
         new webpack.NamedModulesPlugin(),
